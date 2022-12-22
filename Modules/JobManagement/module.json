@@ -1,0 +1,13 @@
+{
+    "name": "JobManagement",
+    "alias": "jobmanagement",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\JobManagement\\Providers\\JobManagementServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
