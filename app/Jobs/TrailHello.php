@@ -2,18 +2,14 @@
 
 namespace App\Jobs;
 
-use Mail;
 use Throwable;
 use Carbon\Carbon;
-use Illuminate\Support\Arr;
 use Illuminate\Bus\Queueable;
 use Illuminate\Support\Facades\Log;
-use App\Data\Constants\JobConstants;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use App\Entities\GuzzleRequests\GuzzleRequest;
 
 class TrailHello implements ShouldQueue
 {
