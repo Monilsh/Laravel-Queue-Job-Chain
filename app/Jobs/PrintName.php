@@ -11,7 +11,7 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 
-class TrailHello implements ShouldQueue
+class PrintName implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
     private $adminName;
@@ -59,6 +59,7 @@ class TrailHello implements ShouldQueue
             \Log::info('Admin Name: ' . $this->adminName);
             sleep(5);
 
+            var_dump($this->adminName);
             $endTime = Carbon::now();
             \Log::info('finishing job: ' . $this->keyName . ' at ' . $endTime);
 

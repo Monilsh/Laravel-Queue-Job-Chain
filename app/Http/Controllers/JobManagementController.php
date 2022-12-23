@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Jobs\JobChain;
-use App\Jobs\TrailHello;
+use App\Jobs\PrintName;
 use Carbon\Carbon;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
@@ -14,17 +14,12 @@ use Throwable;
 class JobManagementController extends Controller
 {
 
-    public function test()
-    {
-        return "Hello";
-    }
-
-    public function printHello(Request $request)
+    public function printName(Request $request)
     {
         $data = $request->all();
         $data['name'] = 'Romil Kumar';
         $data['submit_time'] = Carbon::now()->timezone('UTC')->format('d/m/Y h:m A') . ' UTC';
-        dispatch(new TrailHello($data));
+        dispatch(new PrintName($data));
         return ['status' => 'OK', 'message' => 'Added to queue successfully'];
     }
 

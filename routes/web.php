@@ -19,8 +19,7 @@ Route::get('/', function () {
 
 Route::group(['namespace' => 'App\Http\Controllers'], function()
 {
-    Route::get('/test', 'JobManagementController@test');
     Route::get('/chainJobs', 'JobManagementController@chainJobs');
-    Route::get('/getName', 'JobManagementController@printHello');
+    Route::get('/getName', 'JobManagementController@printName');
 
 });
